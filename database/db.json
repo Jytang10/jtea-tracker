@@ -1,0 +1,28 @@
+{
+  "drinks": [
+    {
+      "name": "Classic Milk Tea",
+      "store": "ShareTea",
+      "location": "Fountain Valley, CA",
+      "score": 90,
+      "stars": 4,
+      "id": 1
+    },
+    {
+      "name": "Thai Milk Tea",
+      "store": "Lollicup",
+      "location": "Irvine, CA",
+      "score": 85,
+      "stars": 3,
+      "id": 2
+    },
+    {
+      "name": "Boba Milk Tea",
+      "store": "Quickly's",
+      "location": "Alhambra CA",
+      "score": 50,
+      "stars": 2,
+      "id": 3
+    }
+  ]
+}
