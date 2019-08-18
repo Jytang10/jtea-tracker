@@ -38,8 +38,11 @@ class App extends React.Component {
       });
   }
 
-  deleteDrink() {
+  deleteDrink(id) {
 
+    fetch('./api/drinks', {
+      method: 'DELETE'
+    });
   }
 
   render() {

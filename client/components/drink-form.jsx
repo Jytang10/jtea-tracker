@@ -93,8 +93,8 @@ class DrinkForm extends React.Component {
           </Col>
         </FormGroup>
         <Row>
-          <Button type="submit">Add</Button>
-          <Button type="reset" value="reset">Reset</Button>
+          <Button type="submit" color="success">Add</Button>
+          <Button type="reset" value="reset" color="secondary">Reset</Button>
         </Row>
       </Form>
     );
