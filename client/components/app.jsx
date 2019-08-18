@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       drinks: []
     };
+    this.addDrink = this.addDrink.bind(this);
     this.deleteDrink = this.deleteDrink.bind(this);
   }
 
@@ -24,6 +25,19 @@ class App extends React.Component {
       .catch(err => console.error('No drinks recorded', err));
   }
 
+  addDrink(drink) {
+    fetch('./api/drinks', {
+      method: 'POST',
+      body: JSON.stringify(drink),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(res => res.json())
+      .then(drink => {
+        const drinkList = this.state.drinks.concat(drink);
+        this.setState({ drinks: drinkList });
+      });
+  }
+
   deleteDrink() {
 
   }
@@ -36,7 +50,7 @@ class App extends React.Component {
         </Row>
         <Row>
           <Col sm="8"><DrinkTable drinks={this.state.drinks} onDelete={this.deleteDrink} /></Col>
-          <Col sm="4"><DrinkForm /></Col>
+          <Col sm="4"><DrinkForm onSubmit={this.addDrink} /></Col>
         </Row>
       </Container>
     );
