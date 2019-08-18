@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   addDrink(drink) {
-    fetch('./api/drinks', {
+    fetch('/api/drinks', {
       method: 'POST',
       body: JSON.stringify(drink),
       headers: { 'Content-Type': 'application/json' }
@@ -39,10 +39,12 @@ class App extends React.Component {
   }
 
   deleteDrink(id) {
-
-    fetch('./api/drinks', {
-      method: 'DELETE'
-    });
+    fetch('/api/drinks/' + id, { method: 'DELETE' })
+      .then(() => {
+        const drinks = this.state.drinks.filter(drink => drink.id !== id);
+        this.setState({ drinks });
+      }
+      );
   }
 
   render() {

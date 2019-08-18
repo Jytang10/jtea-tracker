@@ -8,8 +8,8 @@ class DrinkForm extends React.Component {
       name: '',
       store: '',
       location: '',
-      score: null,
-      stars: null
+      score: '',
+      stars: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,20 +28,20 @@ class DrinkForm extends React.Component {
       name: this.state.name,
       store: this.state.store,
       location: this.state.location,
-      score: this.state.score,
-      stars: this.state.stars
+      score: parseInt(this.state.score),
+      stars: parseInt(this.state.stars)
     };
     this.props.onSubmit(newDrink);
     this.handleReset();
   }
 
-  handleReset(event) {
+  handleReset() {
     this.setState({
       name: '',
       store: '',
       location: '',
-      score: null,
-      stars: null
+      score: '',
+      stars: ''
     });
   }
 

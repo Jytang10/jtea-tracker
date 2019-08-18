@@ -21,8 +21,8 @@ class Drink extends React.Component {
         <td>{this.props.drink.stars}</td>
         <td>
           <Row>
-            <Button color="info" size="sm" onClick={this.handleDelete}>Update</Button>
-            <Button color="danger" size="sm">Delete</Button>
+            <Button color="info" size="sm">Update</Button>
+            <Button color="danger" size="sm" onClick={this.handleDelete}>Delete</Button>
           </Row>
         </td>
       </tr>
