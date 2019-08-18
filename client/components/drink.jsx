@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Button } from 'reactstrap';
 
 class Drink extends React.Component {
   constructor(props) {
@@ -18,7 +19,12 @@ class Drink extends React.Component {
         <td>{this.props.drink.location}</td>
         <td>{this.props.drink.score}</td>
         <td>{this.props.drink.stars}</td>
-        <td>Update & Delete</td>
+        <td>
+          <Row>
+            <Button color="info" size="sm">Update</Button>
+            <Button color="danger" size="sm" onClick={this.handleDelete}>Delete</Button>
+          </Row>
+        </td>
       </tr>
     );
   }

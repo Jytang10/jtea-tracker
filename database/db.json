@@ -23,22 +23,6 @@
       "score": 50,
       "stars": 2,
       "id": 3
-    },
-    {
-      "name": "",
-      "store": "",
-      "location": "",
-      "score": null,
-      "stars": null,
-      "id": 4
-    },
-    {
-      "name": "Test Drink 2",
-      "store": "Test Store 2",
-      "location": "Test City 2",
-      "score": "2",
-      "stars": "2",
-      "id": 5
     }
   ]
 }
